@@ -1,51 +1,43 @@
-📞 Analisador de Ligações – Streamlit
+# 📞 Analisador de Ligações – Streamlit
 
 Repositório destinado ao software criado para ajudar no gerenciamento de ligações gravadas.
 
 Este projeto foi desenvolvido para atender uma necessidade real: facilitar a organização e análise das ligações recebidas diariamente. O sistema lê múltiplos arquivos CSV contendo informações de Data/Hora e Origem das ligações, transforma esses dados em uma tabela clara e estruturada, e exibe quantas vezes cada número telefonou em cada data — tudo de forma automática.
 
-O aplicativo foi construído em Python + Streamlit, com foco em simplicidade e facilidade de uso para pessoas que não têm familiaridade com ferramentas de linha de comando.
+O aplicativo foi construído em **Python + Streamlit**, com foco em simplicidade e facilidade de uso para pessoas que não têm familiaridade com ferramentas de linha de comando.
 
-🚀 Funcionalidades
+## 🚀 Funcionalidades
 
-Upload de múltiplos arquivos CSV simultaneamente
+* Upload de múltiplos arquivos CSV simultaneamente
+* Leitura automática das colunas *Data/Hora* e *Origem*
+* Remoção da parte da hora, considerando apenas **dia/mês/ano**
+* Contagem de chamadas por número e por data
+* Geração de uma tabela dinâmica (pivot) com contagem por dia
+* Coluna **Total** por número
+* Download dos resultados em CSV
+* Arquivo `.bat` para execução com um clique
 
-Leitura automática das colunas Data/Hora e Origem
+## 🖥 Como rodar
 
-Remoção da parte da hora, considerando apenas dia/mês/ano
+1. Instale as dependências:
 
-Contagem de chamadas por número e por data
+   ```
+   pip install -r requirements.txt
+   ```
+2. Execute o aplicativo:
 
-Geração de uma tabela dinâmica (pivot) com contagem por dia
+   ```
+   python -m streamlit run app.py
+   ```
+3. Ou simplesmente clique no arquivo **`iniciar.bat`** incluído no projeto.
 
-Coluna Total por número
+## 📂 Estrutura
 
-Download dos resultados em CSV
+* `app.py` — código principal do sistema
+* `iniciar.bat` — inicializador simples para abrir o sistema com um clique
+* `requirements.txt` — lista de dependências
+* `README.md` — este arquivo
 
-Arquivo .bat para execução com um clique
+---
 
-🖥 Como rodar
-
-Instale as dependências:
-
-pip install -r requirements.txt
-
-
-Execute o aplicativo:
-
-python -m streamlit run app.py
-
-
-Ou simplesmente clique no arquivo iniciar.bat incluído no projeto.
-
-📂 Estrutura
-
-app.py — código principal do sistema
-
-iniciar.bat — inicializador simples para abrir o sistema com um clique
-
-requirements.txt — lista de dependências
-
-README.md — este arquivo
-
-Se quiser, também posso gerar um ícone, um instalador, ou melhorar esse README com badges, imagens ou GIF demonstrando o funcionamento.
+Se quiser, também posso gerar um **ícone**, um **instalador**, ou melhorar esse README com badges, imagens ou GIF demonstrando o funcionamento.
